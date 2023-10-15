@@ -17,6 +17,9 @@ namespace MagicVilla_VillaAPI.Controllers
         }
 
         [HttpGet("{id:int}")]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(404)]
+        [ProducesResponseType(400)]
         public ActionResult<VillaDTO> GetVilla(int id)
         {
             if (id == 0)
